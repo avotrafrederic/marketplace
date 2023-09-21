@@ -1,0 +1,245 @@
+:root{
+    --main-color: #0C181F;
+    --black-color:#10212B;
+    --blue-royal:#162935;
+    --grey-color:#1A313E;
+    --white-color:#cfcfcf;
+    --arseic-color:#1E3B4A;
+}
+@font-face {
+    font-family: Abel;
+    src: url("../font/Abel/Abel-Regular.ttf");
+}
+*{
+    padding: 0;
+    margin: 0;
+    color: var(--white-color);
+}
+html,body,div#root{
+    height: 100%;
+    background: var(--main-color);
+    font-family: Abel,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html{
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+div#root{
+    position: relative;
+}
+div#root div.leftnavbar{
+    position:fixed;
+    right:2rem;
+    z-index: 1000;
+    top: calc(100%/3);
+    bottom: calc(100%/3);
+    background: transparent;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: max-content;
+    box-shadow: 1px 1px 3px var(--main-color),
+    -1px -1px 3px var(--arseic-color);
+    backdrop-filter: blur(15px);
+}
+div.nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: .1rem;
+}
+
+nav.navActive{
+    background:var(--main-color);
+}
+section#home,
+section#home div.container,
+section#home div.container div.row,
+section#home div.container div.row div.col-md-6{
+    height: 100%;
+}
+
+section#home{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: var(--main-color) url(../img/bg/bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+section#home div.container div.row div.col-md-6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: .5rem;
+}
+section#home div.container div.row div.col-md-6 .btn-xl{
+    width: 14rem;
+    height: 3.5rem;
+    border-radius: 1.5rem;
+    background: var(--grey-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    box-shadow: 1px 2px 2px var(--main-color),
+    -1px -2px 2px var(--arseic-color);
+    border: 1px solid var(--blue-royal);
+}
+section#about div.container div.row div.col-md-6 div.container-fluid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#service{
+    background: var(--main-color) url(../img/bg/E-Commerce.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+}
+section#service div.container div.row div.col-md-4 div.card{
+    background: transparent;
+    color: var(--white-color);
+    padding: 1rem;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 1px 2px 5px var(--main-color),
+                -1px -2px 5px var(--arseic-color);
+}
+section#service div.container div.row div.col-md-4 div.card .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background: var(--blue-royal);
+}
+section#service div.container div.row div.col-md-4 div.card .icon:nth-child(1){
+    font-size: 2.5rem;
+}
+section#service div.container div.row div.col-md-4 div.card .card-body{
+    padding: .5rem;
+}
+section#service div.container div.row div.col-md-4 div.card .card-body p{
+    text-align: start;
+}
+section#pricing div.container div.row div.col-md-4 div.card{
+    background: var(--grey-color);
+    color: var(--white-color);
+    box-shadow: 2px 2px 15px var(--main-color),
+                -2px -2px 15px  var(--grey-color);
+    border: none;
+    padding: 0;
+    min-height:500px ;
+    border-radius: .5rem;
+}
+section#pricing div.container div.row div.col-md-4 div.card div.card-header{
+    border-radius: .5rem .5rem 0 0;
+    border: none;
+}
+section#pricing div.container div.row div.col-md-4 div.card div.card-footer{
+    border-radius: 0 0 .5rem .5rem;
+    border: none;
+}
+
+section#contact{
+    background: var(--main-color) url(../img/bg/map.jpg);
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+section#contact div.container div.row div.col-md-6 .card{
+    background: transparent;
+}
+section#contact div.container div.row div.col-md-6 .my-card{
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 1px 5px 5px var(--blue-royal),
+                -1px -5px 5px var(--main-color);
+}
+section#contact div.container div.row div.col-md-6 .container-fluid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: .5rem;
+
+}
+section#contact div.container div.row div.col-md-6 .container-fluid .card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+}
+section#contact div.container div.row div.col-md-6 .container-fluid .card .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+}
+section#contact div.container div.row div.col-md-6 .container-fluid .card .icon:nth-child(1){
+    font-size: 30px;
+    fill: var(--white-color);
+}
+section#contact div.container div.row div.col-md-6  .card .card-body input,
+section#contact div.container div.row div.col-md-6  .card .card-body textarea,
+section#contact div.container div.row div.col-md-6  .card .card-body label,
+section#contact div.container div.row div.col-md-6  .card .card-body label::after{
+    background: transparent;
+}
+section#contact div.container div.row div.col-md-6  .card .card-body label::after{
+    color: var(--white-color);
+}
+section#contact div.container div.row div.col-md-6  .card .card-body input,
+section#contact div.container div.row div.col-md-6  .card .card-body textarea{
+    border-color:var(--blue-royal);
+}
+section#contact div.container div.row div.col-md-6  .card .card-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+section#contact div.container div.row div.col-md-6  .card .card-footer button{
+    background: var(--blue-royal);
+    width: 15rem;
+    border-color: var(--blue-royal);
+}
+section#contact div.container div.row div.col-md-6  .card .card-footer button:active{
+    transition: .2s all ease-in-out;
+    box-shadow: 1px 2px 2px var(--grey-color),
+                -1px -2px 2px var(--black-color);
+}
+footer .container .row .col-md-4 .icon{
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--grey-color);
+}
+footer .container .row .col-md-4 .icon:nth-child(1),
+footer .container .row .col-md-4 .icon:nth-child(2),
+footer .container .row .col-md-4 .icon:nth-child(3){
+    font-size: 1.5rem;
+}
+footer .container .row .footer-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
